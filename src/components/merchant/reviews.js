@@ -4,12 +4,15 @@ import axios from 'axios';
 import Response from './response';
 function Reviews({ data }) {
 	const [ merchantResponse, setMerchantResponse ] = useState([]);
-	useEffect(() => {
-		axios.get('https://www.spatialardhi.com/estate/MerchantReviewResponse/?format=json').then((res) => {
-			let filterResult = res.data.filter((i) => i.review.id === data.id);
-			setMerchantResponse(filterResult);
-		});
-	}, []);
+	useEffect(
+		() => {
+			axios.get('https://www.spatialardhi.com/estate/MerchantReviewResponse/?format=json').then((res) => {
+				let filterResult = res.data.filter((i) => i.review.id === data.id);
+				setMerchantResponse(filterResult);
+			});
+		},
+		[ data ]
+	);
 	return (
 		<div>
 			<div className={styles.repliesContainer}>
