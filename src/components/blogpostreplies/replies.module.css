@@ -1,0 +1,16 @@
+.repliesContainer {
+	display: flex;
+	border: 1px solid #cccfce;
+	margin: 10px;
+	background-color: #00ffff;
+}
+.profileImage {
+	object-fit: cover;
+	object-position: 50% 50%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.name {
+	font-weight: bolder;
+}
