@@ -14,7 +14,7 @@ function Reviews({ data }) {
 		[ data ]
 	);
 	return (
-		<div>
+		<div style={{width:"100%"}}>
 			<div className={styles.repliesContainer}>
 				<div style={{ margin: '20px', padding: '20px', textAlign: 'center' }}>
 					{data.buyer ? (

@@ -1,6 +1,7 @@
 import styles from './../blogpostreplies/replies.module.css';
 import ReactStarsRating from 'react-awesome-stars-rating';
 function Response({ data }) {
+	console.log(data);
 	return (
 		<div style={{ display: 'flex' }}>
 			<div style={{ width: '100px' }}>
